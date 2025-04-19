@@ -57,7 +57,7 @@ function ClientContract() {
   const validateForm = () => {
     // Verificar se todos os campos estão preenchidos
     const emptyFields = Object.entries(formValues)
-      .filter(([_, value]) => !value.trim())
+      .filter(([, value]) => !value.trim())
       .map(([field]) => field);
     
     if (emptyFields.length > 0) {
@@ -188,7 +188,7 @@ function ClientContract() {
               penColor="black"
               canvasProps={{
                 className: 'signature-canvas',
-                width: 500,
+                width: 900,
                 height: 200
               }}
             />

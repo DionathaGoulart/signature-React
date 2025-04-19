@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# Aplicativo de Assinatura de Contratos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um aplicativo front-end para criação e assinatura de contratos digitais. Ele permite que administradores criem modelos de contratos com campos personalizados e gerem links para que clientes preencham e assinem esses contratos.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+### Para Administradores:
 
-### `npm start`
+- Criar modelos de contratos com campos dinâmicos
+- Visualizar contratos criados
+- Gerar links para enviar aos clientes
+- Visualizar contratos assinados
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Para Clientes:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Preencher os dados solicitados no contrato
+- Assinar o contrato digitalmente
+- Baixar o contrato em PDF
+- Receber cópia do contrato por e-mail (simulado no front-end)
 
-### `npm test`
+## Tecnologias Utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js
+- React Router
+- jsPDF (para geração de PDFs)
+- React Signature Canvas (para captura de assinaturas)
+- LocalStorage (para simulação de banco de dados)
 
-### `npm run build`
+## Como Executar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone este repositório
+2. Instale as dependências com `npm install`
+3. Execute o aplicativo com `npm start`
+4. Acesse `http://localhost:3000` no seu navegador
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Fluxo de Uso
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Administrador**: Acesse o painel de administração e crie um novo contrato
+2. **Administrador**: Gere um link para o cliente
+3. **Cliente**: Acesse o link, preencha os dados e assine o contrato
+4. **Cliente**: Receba o PDF do contrato assinado
 
-### `npm run eject`
+## Exemplo de Modelo de Contrato
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+CONTRATO DE PRESTAÇÃO DE SERVIÇOS
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Eu, {cliente}, portador do CPF {cpf}, contrato os serviços de {empresa} para {servico}, pelo valor de R$ {valor}.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+O prazo para conclusão dos serviços será de {prazo} dias úteis.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+{assinatura}
+```
 
-## Learn More
+## Limitações da Versão Atual
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Apenas front-end, sem persistência real de dados
+- Sistema de envio de e-mails simulado
+- Não há autenticação de usuários
+- Para um ambiente de produção, seria necessário um backend

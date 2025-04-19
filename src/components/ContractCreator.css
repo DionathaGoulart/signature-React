@@ -1,0 +1,142 @@
+.contract-creator {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contract-creator h1 {
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.form-group input[type="text"], .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  font-family: inherit;
+}
+
+.field-input {
+  display: flex;
+  gap: 10px;
+}
+
+.field-input input {
+  flex: 1;
+}
+
+.field-input button {
+  background-color: #4c51bf;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.field-input button:hover {
+  background-color: #434190;
+}
+
+.fields-list {
+  margin-top: 0.5rem;
+  background-color: #f7fafc;
+  padding: 1rem;
+  border-radius: 4px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.fields-list ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.fields-list li {
+  margin-bottom: 5px;
+}
+
+.contract-preview {
+  background-color: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.contract-preview h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.preview-content {
+  white-space: pre-wrap;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5;
+}
+
+.highlight {
+  background-color: #ffeaa7;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.save-button, .cancel-button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.save-button {
+  background-color: #48bb78;
+  color: white;
+  border: none;
+}
+
+.save-button:hover {
+  background-color: #38a169;
+}
+
+.cancel-button {
+  background-color: #e2e8f0;
+  color: #4a5568;
+  border: 1px solid #cbd5e0;
+}
+
+.cancel-button:hover {
+  background-color: #cbd5e0;
+}

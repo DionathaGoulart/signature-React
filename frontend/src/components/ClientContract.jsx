@@ -111,18 +111,21 @@ function ClientContract() {
       await sendPDFByEmail(pdfBase64);
     }
 
-    doc.save(`contrato_${contract.name.replace(/\s+/g, '_')}.pdf`);
+    if (!shouldSend) {
+      doc.save(`contrato_${contract.name.replace(/\s+/g, '_')}.pdf`);
+    }
+    
   };
 
   const sendPDFByEmail = async (pdfBase64) => {
     try {
-      await fetch('https://seu-backend.com/send-contract', {
+      await fetch('http://localhost:3001/send-contract', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           pdfBase64,
           clientEmail,
-          adminEmail: 'admin@seudominio.com'
+          adminEmail: 'dionatha.work@gmail.com'
         })
       });
     } catch (err) {

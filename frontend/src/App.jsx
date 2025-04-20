@@ -4,7 +4,9 @@ import AdminDashboard from './components/AdminDashboard';
 import ContractCreator from './components/ContractCreator';
 import ClientContract from './components/ClientContract';
 import GenerateClientLink from './components/GenerateClientLink';
-import './App.css';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
+import './index.css';
 
 function App() {
   return (
@@ -16,22 +18,11 @@ function App() {
           <Route path="/admin/create" element={<ContractCreator />} />
           <Route path="/admin/generate-link/:id" element={<GenerateClientLink />} />
           <Route path="/contract/:id" element={<ClientContract />} />
+          {/* Rota de fallback para páginas não encontradas */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
-  );
-}
-
-function Home() {
-  return (
-    <div className="home-container">
-      <h1>Sistema de Assinatura de Contratos</h1>
-      <div className="portal-links">
-        <Link to="/admin" className="portal-button">
-          Acessar Portal do Administrador
-        </Link>
-      </div>
-    </div>
   );
 }
 

@@ -117,8 +117,10 @@ function ClientContract() {
   };
 
   const sendPDFByEmail = async (pdfBase64) => {
+    const apiUrl = process.env.REACT_APP_API_URL;
+  
     try {
-      await fetch('http://localhost:3001/send-contract', {
+      const response = await fetch(`${apiUrl}/send-contract`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -127,10 +129,18 @@ function ClientContract() {
           adminEmail: 'dionatha.work@gmail.com'
         })
       });
+  
+      if (!response.ok) {
+        const { error } = await response.json();
+        throw new Error(error || 'Erro desconhecido ao enviar e-mail.');
+      }
     } catch (err) {
       console.error('Erro ao enviar e-mail:', err);
+      setError('Falha ao enviar o contrato por e-mail. Tente novamente mais tarde.');
+      setIsSubmitted(false);
     }
   };
+  
 
   if (error && !contract) {
     return (

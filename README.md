@@ -79,6 +79,7 @@ npm install
 3. Crie um arquivo `.env` na raiz do projeto backend com as seguintes variáveis:
 
 ```
+PORT=3001
 EMAIL_FROM=seu-email@provedor.com
 EMAIL_PASS=sua-senha-ou-app-password
 ```
@@ -92,7 +93,13 @@ EMAIL_PASS=sua-senha-ou-app-password
 4. Inicie o servidor de desenvolvimento:
 
 ```bash
-node index.js
+npm run dev
+```
+
+Ou para ambiente de produção:
+
+```bash
+npm start
 ```
 
 ### Configuração do Frontend
@@ -119,7 +126,7 @@ npm run dev
 
 ## 🔌 API Endpoints
 
-### POST /send-contract
+### POST /api/send-contact
 
 Envia o contrato assinado por email.
 

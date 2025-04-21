@@ -36,6 +36,10 @@ Sistema de Assinatura de Contratos é uma plataforma web segura e eficiente para
 
 ![Cliente](./assets/Client.png)
 
+### Email
+
+![Email](./assets/email.png)
+
 ## 🛠️ Tecnologias Utilizadas
 
 ### Frontend

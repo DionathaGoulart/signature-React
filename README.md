@@ -193,7 +193,7 @@ Envia o contrato assinado por email.
 
 ## 👤 Autor
 
-[Meu Linkedin](https://www.linkedin.com/in/dionathagoulart/)
+[Dionatha Goulart](https://www.linkedin.com/in/dionathagoulart/)
 
 ---
 

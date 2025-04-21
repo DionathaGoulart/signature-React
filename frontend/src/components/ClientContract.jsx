@@ -118,6 +118,7 @@ function ClientContract() {
 
   const sendPDFByEmail = async (pdfBase64) => {
     const apiUrl = import.meta.env.VITE_API_URL;
+    const admEmail = import.meta.env.VITE_EMAIL_FROM;
 
     try {
       const response = await fetch(`${apiUrl}/send-contract`, {
@@ -126,7 +127,7 @@ function ClientContract() {
         body: JSON.stringify({
           pdfBase64,
           clientEmail,
-          adminEmail: 'dionatha.work@gmail.com'
+          adminEmail: admEmail
         })
       });
   

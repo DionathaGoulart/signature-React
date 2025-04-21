@@ -117,8 +117,8 @@ function ClientContract() {
   };
 
   const sendPDFByEmail = async (pdfBase64) => {
-    const apiUrl = process.env.REACT_APP_API_URL;
-  
+    const apiUrl = import.meta.env.VITE_API_URL;
+
     try {
       const response = await fetch(`${apiUrl}/send-contract`, {
         method: 'POST',

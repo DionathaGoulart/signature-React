@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contrato Assinado</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        line-height: 1.7;
+        color: #333333;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f7fa;
+      }
+
+      .container {
+        max-width: 650px;
+        margin: 30px auto;
+        padding: 0;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .header {
+        text-align: center;
+        padding: 30px 0;
+        background: linear-gradient(135deg, #2d63c8, #1e4a9d);
+        color: white;
+      }
+
+      .logo {
+        max-width: 200px;
+        margin-bottom: 10px;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+      }
+
+      .content {
+        padding: 40px 30px;
+      }
+
+      h1 {
+        color: #2d63c8;
+        font-size: 28px;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+
+      .success-badge {
+        background-color: #4caf50;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 30px;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 24px;
+        box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+      }
+
+      .info-box {
+        background-color: #f5f9ff;
+        border-left: 5px solid #2d63c8;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+      }
+
+      .info-box p {
+        margin: 10px 0;
+      }
+
+      .button {
+        display: inline-block;
+        background: linear-gradient(135deg, #2d63c8, #1e4a9d);
+        color: white !important;
+        text-decoration: none;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        margin-top: 20px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 10px rgba(45, 99, 200, 0.2);
+        text-align: center;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(45, 99, 200, 0.3);
+      }
+
+      .footer {
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #eaeaea;
+        color: #666666;
+        font-size: 14px;
+        background-color: #fafbfd;
+      }
+
+      .social-icons {
+        margin: 20px 0;
+      }
+
+      .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+        color: #2d63c8;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .social-icons a:hover {
+        color: #1e4a9d;
+      }
+
+      p {
+        margin-bottom: 16px;
+      }
+
+      .divider {
+        height: 5px;
+        width: 50px;
+        background: linear-gradient(90deg, #2d63c8, #5d8fdd);
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+
+      .signature {
+        font-style: italic;
+        margin-bottom: 5px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          margin: 10px auto;
+          border-radius: 8px;
+        }
+
+        .content {
+          padding: 25px 20px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://via.placeholder.com/200x70?text=Contrato+Digital"
+          alt="Contrato Digital"
+          class="logo"
+        />
+      </div>
+      <div class="content">
+        <div class="success-badge">✓ Assinado com sucesso</div>
+        <h1>Seu contrato foi assinado!</h1>
+        <p>Olá,</p>
+        <p>
+          Temos o prazer de informar que seu contrato foi assinado com sucesso e
+          uma cópia está anexada a este e-mail para sua conveniência.
+        </p>
+        <div class="info-box">
+          <p><strong>Cliente:</strong> {{clientEmail}}</p>
+          <p><strong>Data:</strong> {{currentDate}}</p>
+          <p><strong>Status:</strong> Assinado e processado</p>
+        </div>
+        <p>
+          Você pode acessar este documento a qualquer momento em sua área de
+          cliente ou através do anexo deste e-mail.
+        </p>
+        <p>
+          Se tiver qualquer dúvida ou precisar de esclarecimentos adicionais,
+          não hesite em responder a este e-mail ou entrar em contato com nossa
+          equipe de suporte.
+        </p>
+        <center>
+          <a href="#" class="button" color="#ffffff">Acessar Minha Conta</a>
+        </center>
+      </div>
+      <div class="footer">
+        <div class="signature">Atenciosamente,</div>
+        <p><strong>Equipe Contrato Digital</strong></p>
+        <div class="divider"></div>
+        <div class="social-icons">
+          <a href="#">Facebook</a> • <a href="#">Instagram</a> •
+          <a href="#">LinkedIn</a>
+        </div>
+        <p>
+          &copy; {{currentYear}} Contrato Digital. Todos os direitos reservados.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,29 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import AdminDashboard from './components/AdminDashboard';
-import ContractCreator from './components/ContractCreator';
-import ClientContract from './components/ClientContract';
-import GenerateClientLink from './components/GenerateClientLink';
-import Home from './components/Home';
-import NotFound from './components/NotFound';
-import './index.css';
+import { Header, Footer} from '@lib';
+import { AppRoutes } from './app/routes';
 
-function App() {
+
+export default function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/admin/create" element={<ContractCreator />} />
-          <Route path="/admin/generate-link/:id" element={<GenerateClientLink />} />
-          <Route path="/contract/:id" element={<ClientContract />} />
-          {/* Rota de fallback para páginas não encontradas */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Header />
+      <main className="flex-1">
+      <AppRoutes />
+      </main>
+      <Footer />
+    </div>
   );
 }
-
-export default App;

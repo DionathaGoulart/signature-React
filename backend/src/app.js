@@ -9,10 +9,19 @@ app.get('/', (req, res) => {
   res.send('Backend funcionando! 🚀');
 });
 
+// Rota de health check para UptimeRobot
+app.get('/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'OK', 
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    message: 'Servidor funcionando normalmente'
+  });
+});
+
 // Rotas da aplicação
 app.use('/api', contractRoutes);
 
-// Middleware de tratamento de erros (sempre deve ser o último)
 app.use(errorHandler);
 
 module.exports = app;

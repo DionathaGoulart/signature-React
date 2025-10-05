@@ -2,7 +2,7 @@
 
 # 📝 Sistema de Assinatura de Contratos
 
-**Plataforma segura e eficiente para gestão e assinatura digital de documentos contratuais**
+**Plataforma para gestão e assinatura digital de documentos contratuais**
 
 [![React](https://img.shields.io/badge/React-19.1.0-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js)](https://nodejs.org/)
@@ -160,11 +160,6 @@ signature-React/
 - **Autoprefixer 10.4.21** - Prefixos CSS automáticos
 - **Nodemon 3.1.9** - Monitor de arquivos para Node.js
 
-### Deploy e CI/CD
-
-- **Vercel** - Plataforma de deploy para frontend
-- **GitHub** - Controle de versão e CI/CD
-
 ### Integrações
 
 - **Email Service** - Envio automático de contratos
@@ -227,76 +222,6 @@ npm run dev
 
 ---
 
-## 🧪 CI/CD e Qualidade
-
-### GitHub Actions
-
-O projeto possui workflow automatizado de CI/CD:
-
-- **Build Frontend** - Compilação e verificação do código React
-- **Lint Check** - Verificação de qualidade de código
-- **Deploy Automático** - Deploy na Vercel em push para main
-
-### Ferramentas de Qualidade
-
-- **ESLint** - Análise estática de código JavaScript
-- **React Hooks Plugin** - Regras específicas para hooks
-- **Vite** - Build tool otimizado para desenvolvimento
-
----
-
-## 🚀 Deploy
-
-### Deploy Automático (Vercel)
-
-O projeto está configurado para deploy automático na Vercel:
-
-- **Produção**: Deploy automático na branch `main`
-- **Preview**: Deploy automático em Pull Requests
-- **URL**: `https://signature-react.vercel.app`
-
-### Configuração Vercel
-
-- **Framework**: Vite
-- **Runtime**: Node.js 18
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **Install Command**: `npm install`
-
-### Configuração Automática
-
-1. Conecte seu repositório no Vercel Dashboard
-2. Configure as variáveis de ambiente necessárias
-3. O deploy acontece automaticamente via GitHub Actions
-
-### Workflows GitHub Actions
-
-O projeto possui workflow automatizado:
-
-- **CI/CD** - Build, testes e deploy automático
-
-### Deploy Manual
-
-```bash
-# Build para produção
-cd frontend
-npm run build
-
-# Deploy via Vercel CLI
-npx vercel --prod
-```
-
----
-
-## 📊 Performance
-
-- **Bundle Size**: Otimizado com Vite e tree-shaking
-- **Loading Time**: Carregamento rápido com code splitting
-- **Responsive Design**: Interface adaptável para todos os dispositivos
-- **SEO Friendly**: Meta tags e estrutura semântica
-
----
-
 ## 🔧 Configuração
 
 ### Variáveis de Ambiente
@@ -334,16 +259,6 @@ O sistema é totalmente responsivo e otimizado para:
 - **📱 Tablet** (768px - 1024px)
 - **💻 Desktop** (1024px - 1440px)
 - **🖥️ Large Desktop** (1440px+)
-
----
-
-## ♿ Acessibilidade
-
-- **Navegação por Teclado** - Suporte completo para navegação via teclado
-- **Contraste Adequado** - Cores com contraste suficiente para leitura
-- **Labels Semânticos** - Formulários com labels apropriados
-- **ARIA Attributes** - Atributos para leitores de tela
-- **Focus Management** - Gerenciamento adequado do foco
 
 ---
 
